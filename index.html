@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+
+<head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>ANAP-DEV</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="left-container">
+        <button class="button" data-text="Awesome">
+          <span class="actual-text">&nbsp;CONTATO&nbsp;</span>
+          <span aria-hidden="true" class="hover-text">&nbsp;CONTATO&nbsp;</span>
+        </button>
+      </div>
+      <div class="right-container">
+        <nav id="navbar">
+          <ul>
+            <li><a href="#home" class="link-animado">Home</a></li>
+            <li><a href="#sobre-mim" class="link-animado">Sobre mim</a></li>
+            <li><a href="#projetos" class="link-animado">Projetos</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema claro e escuro">
+          <svg class="moon-icon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span class="theme-label">TEMA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Menu de navegação">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="s-hero" id="home">
+    <div class="hero-video-wrapper">
+      <video class="hero-video" autoplay loop muted playsinline>
+        <source src="./img/video-portfolio.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="text-hero">
+        <div class="left-text" data-aos="fade-up-right" data-aos-duration="1000">
+          <div class="text-reveal">
+            <strong class="typing-target">ANA#PAULA</strong>
+          </div>
+          <h1>Desenvolvedora<br>Front-end</h1>
+          <p class="hero">Design em código - Layout -<br> Aplicações Web - Wireframe -</p>
+        </div>
+        <div class="right-text" data-aos="fade-up-left" data-aos-duration="1000">
+          <p class="hero"><strong>&ltbody&gt</strong>background-color: blue;<strong>&ltbody&gt</strong></p>
+          <p class="hero"><strong>&ltheader&gt</strong>padding: 1.2rem 0;<strong>&ltheader&gt</strong></p>
+          <p class="hero"><strong>&ltfooter&gt</strong>margin: 0 auto;<strong>&ltfooter&gt</strong></p>
+          <p class="hero"><strong>&ltmain&gt</strong>color: #fff;<strong>&ltmain&gt</strong></p>
+          <p class="hero"><strong>&ltnav&gt</strong>display: flex;<strong>&ltnav&gt</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="sobre" id="sobre-mim">
+    <div class="container">
+      <div class="about-card">
+        <div class="icones-esquerda" data-aos="zoom-in" data-aos-duration="3000">
+          <div class="icon top">
+            <img src="./img/icon-laptop.svg" alt="Icone notebook" title="Icone notebook">
+          </div>
+          <div class="grupo-meio">
+            <div class="icon">
+              <img src="./img/icon-html.svg" alt="Icone html" title="Icone html">
+            </div>
+            <div class="icon">
+              <img src="./img/icon-css.svg" alt="Icone css" title="Icone css">
+            </div>
+            <div class="icon">
+              <img src="./img/icon-javascript.svg" alt="Icone javascript" title="Icone javascript">
+            </div>
+          </div>
+          <div class="icon bottom">
+            <img src="./img/icone-codigo.svg" alt="Icone codigo" title="Icone codigo">
+          </div>
+        </div>
+        <div class="about-card__marquee" aria-label="Sobre mim">
+          <div class="about-card__marquee-track" aria-hidden="true">
+            <span>SOBRE MIM</span><span>SOBRE MIM</span><span>SOBRE MIM</span><span>SOBRE MIM</span>
+            <span>SOBRE MIM</span><span>SOBRE MIM</span><span>SOBRE MIM</span><span>SOBRE MIM</span>
+          </div>
+        </div>
+        <div class="about-card__robot" aria-hidden="true">
+          <img src="./img/robo-frente-sembg.png" alt="">
+        </div>
+        <div class="about-card__portrait">
+          <img src="./img/eu-sembg.webp" data-aos="fade-up" data-aos-duration="3000" alt="Minha foto"
+            title="Minha foto">
+        </div>
+        <p class="about-card__note text-animation-js">
+          “Elaborar um site é conectar uma marca, uma história a qualquer canto do planeta.<br />
+          Para mim, FRONT-END é a possibilidade de criar experiências visuais e digitais que
+          impactem positivamente a vida das pessoas.”
+        </p>
+        <h2 class="about-card__name">ANA PAULA</h2>
+      </div>
+    </div>
+  </section>
+
+  <div class="projetos" id="projetos">
+    <div class="container">
+      <div class="text-area" data-aos="fade-up">
+        <h2 data-aos="flip-up" data-aos-duration="2000">Meus<br />Projetos</h2>
+      </div>
+      <div id="card-area">
+        <div class="wrapper">
+          <div class="box-area">
+            <div class="box">
+              <img src="./img/proj-barbearia.webp" alt="Projeto Barbearia" title="Projeto Barbearia">
+              <div class="overlay">
+                <h3>Barbearia</h3>
+                <p>Projeto simples com animações para uma barbearia</p>
+                <a href="https://barbershop-ap.netlify.app/" target="_blank">Visite o site</a>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./img/proj-restaurante.webp" alt="Projeto Restaurante Delivery"
+                title="Projeto Restaurante Delivery">
+              <div class="overlay">
+                <h3>Restaurante</h3>
+                <p>Projeto para um restaurante que faz apenas delivery</p>
+                <a href="https://food-restaurante.netlify.app/" target="_blank">Visite o site</a>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./img/proj-designinterior.webp" alt="Projeto Design de Interiores"
+                title="Projeto Design de Interiores">
+              <div class="overlay">
+                <h3>Design de Interiores</h3>
+                <p>Projeto minimalista e luxuoso para uma empresa de Design de Interiores</p>
+                <a href="https://aura-interiordesign.netlify.app/" target="_blank">Visite o site</a>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./img/strangerthings-project.webp" alt="Projeto Stranger Things"
+                title="Projeto Stranger Things">
+              <div class="overlay">
+                <h3>Protótipo Stranger Things</h3>
+                <p>Projeto para a página de divulgação do filme</p>
+                <a href="https://strangerthings-project.netlify.app/" target="_blank">Visite o site</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="contato" id="contato">
+    <div class="container">
+      <div class="contato__intro">
+        <h2 data-aos="fade-right" data-aos-duration="2000">
+          CONTATO
+        </h2>
+      </div>
+      <div class="contato__content">
+        <div class="contato__info" data-aos="fade-right">
+          <span class="contato__subtitle">
+            ENTRE EM CONTATO
+          </span>
+          <p>
+            Tem uma ideia, um projeto ou simplesmente
+            quer conversar sobre desenvolvimento web?
+          </p>
+          <a href="mailto:fernandes.anapaula85@gmail.com" class="contato__email">
+            fernandes.anapaula85@gmail.com
+          </a>
+          <div class="contato__social">
+            <span>Me encontre também em</span>
+            <div>
+              <a href="https://github.com/ana-paula-fernandes" target="_blank">
+                GitHub ↗
+              </a>
+              <a href="https://www.linkedin.com/in/ana-paula-fernandes/" target="_blank">
+                LinkedIn ↗
+              </a>
+              <a href="https://www.instagram.com/paulinha_fer85/" target="_blank">
+                Instagram ↗
+              </a>
+            </div>
+          </div>
+        </div>
+        <form class="contato__form" id="contactForm" data-aos="fade-left">
+          <div class="campo">
+            <label for="nome">
+              Nome
+            </label>
+            <input type="text" id="nome" name="name" placeholder="Seu nome" required>
+          </div>
+          <div class="campo">
+            <label for="email">
+              E-mail
+            </label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+          </div>
+          <div class="campo">
+            <label for="assunto">
+              Assunto
+            </label>
+            <input type="text" id="assunto" name="assunto" placeholder="Assunto" required>
+          </div>
+          <div class="campo">
+            <label for="mensagem">
+              Mensagem
+            </label>
+            <textarea id="mensagem" name="message" placeholder="Escreva sua mensagem..." required></textarea>
+          </div>
+          <button type="submit" class="contato__button">
+            <span>Enviar mensagem</span>
+            <span class="arrow">
+              ↗
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="img-mobile" data-aos="fade-up-right">
+      <img src="./img/img-contato.webp" alt="Imagem celular" title="Imagem celular">
+    </div>
+  </section>
+
+  <a href="https://api.whatsapp.com/send?phone=5521998240775&text=Ol%C3%A1!%20Estou%20entrando%20em%20contato%20para%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20cria%C3%A7%C3%A3o%20de%20um%20site!"
+    class="btn-whatsapp">
+    <img src="./img/whatsapp.svg" alt="Botao Whatsapp" title="Botao Whatsapp">
+    <span class="tooltip-text">Entre em contato</span>
+  </a>
+
+
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="./js/scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+/* ==========================================================================
+   RESPONSIVIDADE GERAL (DESKTOP MÉDIO / TABLET LANDSCAPE < 1100px)
+   ========================================================================== */
+@media (max-width: 1100px) {
+  .s-hero {
+    padding: 12rem 0 6rem;
+
+    .container {
+      .text-hero {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.5rem;
+      }
+    }
+  }
+
+  .projetos {
+    .container {
+      #card-area {
+        .wrapper {
+          .box-area {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (TABLET PORTRAIT < 900px)
+   ========================================================================== */
+@media (max-width: 900px) {
+  header {
+    top: 0;
+    padding: 1.6rem 0;
+
+    .container {
+      padding: 0 clamp(1.6rem, 3.5vw, 3.2rem);
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+    }
+
+    .right-container {
+      gap: 1.5rem;
+
+      nav {
+        position: fixed;
+        top: 6.5rem;
+        left: 1.5rem;
+        right: 1.5rem;
+        background: var(--bg-surface-elevated);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid var(--border-subtle);
+        border-radius: 20px;
+        padding: 2.4rem 2rem;
+        box-shadow: var(--shadow-lg);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        transition: all $transition-normal;
+        z-index: 1001;
+
+        ul {
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+          width: 100%;
+
+          li {
+            width: 100%;
+            text-align: center;
+
+            a {
+              display: block;
+              font-size: 1.5rem;
+              padding: 0.8rem 0;
+            }
+          }
+        }
+
+        &.active {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  .s-hero {
+    padding: clamp(14rem, 20vh, 22rem) 0 6rem;
+    min-height: auto;
+    align-items: flex-start;
+
+    .container {
+      .text-portfolio {
+        top: -1rem;
+
+        span {
+          font-size: clamp(6rem, 14vw, 14rem);
+        }
+      }
+
+      .text-hero {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        margin-top: 2rem;
+
+        .left-text {
+          text-align: left;
+        }
+
+        .right-text {
+          max-width: 100%;
+          padding: 2.4rem 2rem;
+        }
+      }
+    }
+  }
+
+  .sobre {
+    .container {
+      .about-card {
+        min-height: clamp(48rem, 92vw, 62rem);
+
+        &__robot {
+          width: 140%;
+          top: 8%;
+        }
+
+        &__portrait {
+          width: clamp(26rem, 44vw, 38rem);
+          height: 88%;
+        }
+
+        &__note {
+          top: 9rem;
+          width: min(19rem, 25%);
+        }
+      }
+    }
+  }
+
+  .contato {
+    &__background {
+      &::after {
+        font-size: clamp(8rem, 18vw, 18rem);
+      }
+    }
+
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+    }
+
+    &__info {
+      max-width: 100%;
+    }
+
+    &__social {
+      margin-top: 4rem;
+    }
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (SMARTPHONES < 650px)
+   ========================================================================== */
+@media (max-width: 650px) {
+  header {
+    .left-container {
+      .button {
+        --fs-size: 1.1rem;
+        padding: 0.6rem 1.2rem;
+        letter-spacing: 0.1rem;
+      }
+    }
+
+    .theme-toggle-btn {
+      padding: 0.6rem 1rem;
+
+      span.theme-label {
+        display: none;
+      }
+    }
+  }
+
+  .s-hero {
+    padding: 9rem 0 5rem;
+
+    .container {
+      .text-hero {
+        .left-text {
+          .text-reveal strong {
+            letter-spacing: 0.15rem;
+          }
+        }
+
+        .right-text {
+          padding: 2rem 1.6rem;
+
+          p.hero {
+            font-size: 1.3rem;
+            line-height: 1.7;
+          }
+        }
+      }
+    }
+  }
+
+  .sobre {
+    padding: 6rem 0;
+
+    .container {
+      padding: 0 1.6rem;
+
+      .about-card {
+        min-height: 54rem;
+        border-radius: 2.4rem;
+
+        &__robot {
+          width: 160%;
+          top: 7%;
+        }
+
+        &__portrait {
+          width: min(80%, 31rem);
+          height: 72%;
+        }
+
+        &__note {
+          top: auto;
+          right: auto;
+          bottom: 2rem;
+          left: 1.8rem;
+          width: min(19rem, 70%);
+          padding: 0.7rem 0.8rem 0.7rem 1.2rem;
+          background: var(--bg-surface-elevated);
+          backdrop-filter: blur(0.8rem);
+          -webkit-backdrop-filter: blur(0.8rem);
+          font-size: 0.95rem;
+          line-height: 1.55;
+        }
+
+        &__name {
+          top: 62%;
+          font-size: clamp(3.7rem, 13.5vw, 6rem);
+          letter-spacing: -0.15rem;
+        }
+      }
+    }
+  }
+
+  .projetos {
+    .container {
+      #card-area {
+        .wrapper {
+          .box-area {
+            grid-template-columns: 1fr;
+            max-width: 42rem;
+            margin: 0 auto;
+
+            .box {
+              height: 34rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contato {
+    padding: 7rem 0 9rem;
+
+    &__intro {
+      margin-bottom: 3.5rem;
+    }
+
+    &__form {
+      border-radius: 2rem;
+    }
+
+    &__button {
+      max-width: 100%;
+      padding: 1.2rem 1.4rem 1.2rem 2.2rem;
+    }
+
+    &__email {
+      font-size: 1.45rem;
+      word-break: break-all;
+    }
+  }
+}

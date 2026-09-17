@@ -1,0 +1,93 @@
+// Tipografias
+$font-space-mono: 'Space Mono', monospace;
+$font-orbitron: 'Orbitron', sans-serif;
+
+// Paleta base do projeto
+$brand-dark1: #2a0c4e;
+$brand-dark2: #c28be799;
+$brand-normal: #a368b5;
+$brand-light: rgb(229, 216, 232);
+$neutral-white: #ffffff;
+$neutral-dark: #000000;
+$green: #00f7ff;
+$amber: #ff9d42;
+$amber-glow: rgba(255, 157, 66, 0.35);
+$cyan-glow: rgba(0, 247, 255, 0.35);
+
+// Variáveis dinâmicas CSS para Dark Mode (Padrão) e Light Mode
+:root,
+[data-theme="dark"] {
+  --bg-primary: #0c0715;
+  --bg-secondary: #140b22;
+  --bg-tertiary: #1e1033;
+  --bg-surface: rgba(25, 14, 43, 0.65);
+  --bg-surface-elevated: rgba(35, 20, 60, 0.75);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --bg-glass-hover: rgba(255, 255, 255, 0.08);
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(0, 247, 255, 0.4);
+  --border-amber: rgba(255, 157, 66, 0.4);
+
+  --text-primary: #ffffff;
+  --text-secondary: #e5d8e8;
+  --text-muted: #a894b4;
+  --text-inverse: #0c0715;
+
+  --accent-cyan: #00f7ff;
+  --accent-amber: #ff9d42;
+  --accent-violet: #c28be7;
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.7);
+  --shadow-glow-cyan: 0 0 30px rgba(0, 247, 255, 0.25);
+  --shadow-glow-amber: 0 0 30px rgba(255, 157, 66, 0.25);
+
+  --video-overlay-grad: radial-gradient(circle at 65% 50%, rgba(12, 7, 21, 0.1) 0%, rgba(12, 7, 21, 0.55) 65%, #0c0715 100%);
+  --marquee-color: rgba(229, 216, 232, 0.18);
+  --card-bg: rgba(20, 11, 34, 0.7);
+  --input-border: rgba(229, 216, 232, 0.25);
+  --header-glass: rgba(12, 7, 21, 0.75);
+}
+
+[data-theme="light"] {
+  --bg-primary: #f8f6fb;
+  --bg-secondary: #ece7f5;
+  --bg-tertiary: #dfd7ee;
+  --bg-surface: rgba(255, 255, 255, 0.85);
+  --bg-surface-elevated: rgba(255, 255, 255, 0.95);
+  --bg-glass: rgba(42, 12, 78, 0.03);
+  --bg-glass-hover: rgba(42, 12, 78, 0.06);
+
+  --border-subtle: rgba(42, 12, 78, 0.12);
+  --border-accent: rgba(0, 184, 194, 0.5);
+  --border-amber: rgba(230, 109, 0, 0.5);
+
+  --text-primary: #18092e;
+  --text-secondary: #3b2259;
+  --text-muted: #6f598a;
+  --text-inverse: #ffffff;
+
+  --accent-cyan: #009cb0;
+  --accent-amber: #e66d00;
+  --accent-violet: #8c3ea6;
+
+  --shadow-sm: 0 4px 12px rgba(42, 12, 78, 0.06);
+  --shadow-md: 0 10px 30px rgba(42, 12, 78, 0.1);
+  --shadow-lg: 0 20px 50px rgba(42, 12, 78, 0.14);
+  --shadow-glow-cyan: 0 0 30px rgba(0, 156, 176, 0.2);
+  --shadow-glow-amber: 0 0 30px rgba(230, 109, 0, 0.2);
+
+--video-overlay-grad: linear-gradient(to bottom, rgba(248, 246, 251, 0) 60%, rgba(248, 246, 251, 0.8) 85%, #f8f6fb 100%);
+  --marquee-color: rgba(42, 12, 78, 0.718);
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --input-border: rgba(42, 12, 78, 0.2);
+  --header-glass: rgba(248, 246, 251, 0.85);
+}
+
+// Transições e animações
+$transition-fast: 0.2s ease;
+$transition-normal: 0.4s ease;
+$transition-slow: 0.7s ease;
+

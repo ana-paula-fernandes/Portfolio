@@ -1,0 +1,248 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 2.2rem 0;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: all $transition-normal;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 clamp(1.6rem, 3.5vw, 3.2rem);
+    transition: all $transition-normal;
+  }
+
+  .left-container {
+    display: flex;
+    align-items: center;
+
+    .button {
+      background: transparent;
+      border: none;
+      position: relative;
+      padding: 0.8rem 1.8rem;
+      border-radius: 3rem;
+      --border-right: 0.3rem;
+      --text-stroke-color: var(--text-secondary);
+      --animation-color: var(--accent-cyan);
+      --fs-size: 1.3rem;
+      letter-spacing: 0.2rem;
+      text-decoration: none;
+      font-size: var(--fs-size);
+      font-family: $font-orbitron;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--text-stroke-color);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform $transition-fast, box-shadow $transition-fast;
+
+      .actual-text {
+        color: var(--text-primary);
+        -webkit-text-stroke: 0;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+      }
+
+      .hover-text {
+        position: absolute;
+        box-sizing: border-box;
+        content: attr(data-text);
+        color: var(--animation-color);
+        width: 0%;
+        inset: 0;
+        border-right: var(--border-right) solid var(--animation-color);
+        overflow: hidden;
+        transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        -webkit-text-stroke: 0.1rem var(--animation-color);
+        display: flex;
+        align-items: center;
+        padding-left: 1.8rem;
+        background: rgba(0, 247, 255, 0.06);
+        border-radius: 3rem 0 0 3rem;
+      }
+
+      &:hover {
+        transform: translateY(-0.1rem);
+
+        .hover-text {
+          width: 100%;
+          filter: drop-shadow(0 0 1.6rem var(--animation-color));
+          border-radius: 3rem;
+        }
+      }
+
+      &:active {
+        transform: scale(0.97);
+      }
+    }
+  }
+
+  .right-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    nav {
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 2.8rem;
+
+        li {
+          a {
+            font-family: $font-orbitron;
+            font-size: 1.35rem;
+            letter-spacing: 0.1rem;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            text-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.6);
+            transition: color $transition-fast;
+            position: relative;
+            padding: 0.6rem 0;
+
+            &.link-animado::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              transform: scaleX(0);
+              height: 0.2rem;
+              bottom: 0;
+              left: 0;
+              background-color: var(--accent-cyan);
+              transform-origin: bottom right;
+              transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+
+            &:hover {
+              color: var(--accent-cyan);
+
+              &::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+              }
+            }
+
+            &.active {
+              color: var(--accent-cyan);
+
+              &::after {
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Botão Toggle Dark/Light Mode */
+  .theme-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 3rem;
+    background: var(--bg-glass);
+    border: 0.1rem solid var(--border-subtle);
+    color: var(--text-primary);
+    cursor: pointer;
+    font-family: $font-orbitron;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    transition: all $transition-normal;
+    position: relative;
+    overflow: hidden;
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      stroke: currentColor;
+      fill: none;
+      transition: transform $transition-normal, opacity $transition-normal;
+    }
+
+    .sun-icon {
+      display: none;
+    }
+
+    .moon-icon {
+      display: block;
+    }
+
+    &:hover {
+      border-color: var(--accent-amber);
+      box-shadow: 0 0 1.5rem var(--amber-glow);
+      color: var(--accent-amber);
+      transform: translateY(-0.1rem);
+    }
+
+    &:active {
+      transform: scale(0.96);
+    }
+  }
+
+  /* Mobile menu button */
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    padding: 0.6rem;
+    border-radius: 0.8rem;
+    background: var(--bg-glass);
+    border: 0.1rem solid var(--border-subtle);
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 0.2rem;
+      background-color: var(--text-primary);
+      transition: transform $transition-normal, opacity $transition-normal;
+    }
+
+    &.open {
+      span:nth-child(1) {
+        transform: translateY(0.7rem) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translateY(-0.7rem) rotate(-45deg);
+      }
+    }
+  }
+}
+
+/* Light mode specific switch for theme icon */
+[data-theme="light"] {
+  header {
+    .theme-toggle-btn {
+      .sun-icon {
+        display: block;
+      }
+      .moon-icon {
+        display: none;
+      }
+    }
+  }
+}

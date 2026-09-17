@@ -1,0 +1,7 @@
+.container {
+  width: 100%;
+  max-width: 140rem;
+  padding: 0 clamp(1.6rem, 3.5vw, 3.2rem);
+  margin-inline: auto;
+  position: relative;
+}
